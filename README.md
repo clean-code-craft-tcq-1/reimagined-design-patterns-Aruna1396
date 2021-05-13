@@ -41,3 +41,25 @@ Cons: The overall complexity of the code increases because you need to introduce
 Its better not to use adapter pattern when we dont actually have the need for them to keep the code simpler.
 
 
+## Mediator Pattern
+
+### Summary
+It is a widely used behavioural pattern which reduces direct communication between multiple objects/components by making them communicate through the mediator object.
+This reduces the chaotic dependencies between communicating objects & many-to-many relationships & thereby removing tight couplings
+
+### Usage
+This can be used when there are complex set of components/objects which are dependent on others
+
+### Example
+
+Real World Scenario: Air Traffic Control System is best example of Mediator Pattern. 
+Various flights do not interact directly but only with traffic controller which acts a mediator as all communication between flights goes through it
+
+### Advantages & Disadvantages
+Pros:
+ - Promotes loose couplings between different objects/components & prevents tight coupling
+ - Makes the code reusable
+ - Flexibility - plug in and plug out the components at ease
+
+Cons:
+ - Since all communications are handled by a single mediator, it might become a God Object (knows too much and does too much)
