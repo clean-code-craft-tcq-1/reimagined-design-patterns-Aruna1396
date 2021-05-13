@@ -44,11 +44,11 @@ Its better not to use adapter pattern when we dont actually have the need for th
 ## Mediator Pattern
 
 ### Summary
-It is a widely used behavioural pattern which reduces direct communication between multiple objects/components by making them communicate through the mediator object.
-This reduces the chaotic dependencies between communicating objects & many-to-many relationships & thereby removing tight couplings
+It is a widely used behavioural pattern which aims at reducing direct communication between multiple objects/components by making them communicate through the mediator object.
+This reduces chaotic dependencies between multiple communicating objects & many-to-many relationships thereby removing tight couplings
 
 ### Usage
-This can be used when there are complex set of components/objects which are dependent on others
+This can be used when there are complex set of components/objects which are dependent on others.
 
 ### Example
 
@@ -57,9 +57,31 @@ Various flights do not interact directly but only with traffic controller which 
 
 ### Advantages & Disadvantages
 Pros:
- - Promotes loose couplings between different objects/components & prevents tight coupling
+ - Promotes loose couplings between different objects/components as it reduces tight coupling
  - Makes the code reusable
- - Flexibility - plug in and plug out the components at ease
+ - Supports Open & Closed Principle
+ - Flexibility - Plug in and Plug out the components at ease
 
 Cons:
  - Since all communications are handled by a single mediator, it might become a God Object (knows too much and does too much)
+
+## Decorator Pattern
+
+### Summary
+This structural pattern allows us to add additional functionalities dynamically without altering the existing/core functionality
+The original object is wrapped by abstract wrapper interface. Then core object & decorator object will inherit from this interface, and we can keep adding more decorators as per functionality
+
+### Example
+Real World Scenario: 
+Lets take an example of pizza, where the base topping remains the same and based on the customer requests & pricing additional toppings can be added.
+
+Similarly, if we have some alert mechanism which will alert the users via mail and there is a need for other types like FB notification, SMS, Calls, we could use this decorator pattern for the addons
+
+### Advantages & Disadvantages
+Pros:
+ - Supports Open-Close Principle: Ability to add more functionality dynamically without altering existing code
+ - Easy plug in and plug out at run-time
+ - Flexibility
+
+Cons:
+ - Usage of multiple decorators can make the maintainability difficult.
