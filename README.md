@@ -85,3 +85,25 @@ Pros:
 
 Cons:
  - Usage of multiple decorators can make the maintainability difficult.
+
+## Proxy Pattern
+
+### Summary
+Proxy is a structural pattern which is used as replica/substitute of the original component. It has reference to the original component
+
+### Usage
+Proxy patterns are used on multiple scenarios, 
+
+ - Protection: Proxy servers are used in place of actual server to prevent security attacks. On verification of the credentials/authenticity the requests from clients will be routed to the actual server
+   Also, access restriction: Like how Bosch servers checks & restricts access to facebook, GMail etc
+ - Virtual Proxy: Consider the case of photos server, which takes resources to load pictures, we can implement a proxy to load the default pics & only call the actual server whenever needed
+ - Remote Proxy: Local representation of remote server. It can perform connection establishments, encoding, decoding and transfers requests to actual server
+
+### Advantages & Disadvantages
+Pros:
+- Provides protection from security threats
+- Resource optimization - Does not utilize actual objects without needs
+- Ability to modify proxy without alteration of actual component/server
+
+Cons:
+The major drawback would be time delay which is caused by the proxy servers. But, sometimes security >> Performance
